@@ -1,6 +1,6 @@
 # Machine Learning - Coursera - Stanford
 
-*These are the programming assignment in the coursera course - MAchine Learning offered by Stanford*
+*The following contents are the programming assignment in the coursera course - Machine Learning - offered by Stanford*
 
 1. Octave Tutorial
 
