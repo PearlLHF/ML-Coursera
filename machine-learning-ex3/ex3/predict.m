@@ -22,11 +22,12 @@ p = zeros(size(X, 1), 1);
 %
 
 
+X = [ones(m, 1) X];
 
+hid_layer = sigmoid(Theta1 * X');
+hid_layer = [ones(1, m); hid_layer];
 
-
-
-
+[~, p] = max(transpose(sigmoid(Theta2 * hid_layer)), [], 2);
 
 
 % =========================================================================
