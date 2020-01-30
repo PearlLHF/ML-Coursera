@@ -77,7 +77,15 @@ for i = 1:m
     J = J - yk' * log(a3) - (1-yk')*log(1-a3);
 end
 
-J = 1/m * J;
+temp1 = Theta1;
+temp1(:,1) = 0;
+
+temp2 = Theta2;
+temp2(:,1) = 0;
+
+temp = [temp1(:); temp2(:)];
+
+J = 1/m * (J + lambda/2 * sum(temp.^2));
 
 % -------------------------------------------------------------
 
