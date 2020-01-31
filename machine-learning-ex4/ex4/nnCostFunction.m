@@ -62,19 +62,36 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
+DeltaL1 = zeros(size(Theta1_grad));
+DeltaL2 = zeros(size(Theta2_grad));
+
 for i = 1:m 
+
+    % Forward
     a1 = [1 X(i,:)]';
 
+    % hidden layer
     z2 = Theta1 * a1;
     a2 = [1; sigmoid(z2)];
 
+    % output layer
     z3 = Theta2 * a2;
     a3 = sigmoid(z3);
 
     yk = zeros(num_labels,1);
     yk(y(i)) = 1;
-
     J = J - yk' * log(a3) - (1-yk')*log(1-a3);
+
+
+    % Backpropagation
+    delta3 = a3 - yk;
+    DeltaL2 = DeltaL2 + delta3 * a2';
+
+    % hidden layer
+    delta2 = Theta2' * delta3;
+    delta2 = delta2(2:end);
+    delta2 = delta2 .* sigmoidGradient(z2);
+    DeltaL1 = DeltaL1 + delta2 * a1';
 end
 
 temp1 = Theta1;
@@ -86,6 +103,9 @@ temp2(:,1) = 0;
 temp = [temp1(:); temp2(:)];
 
 J = 1/m * (J + lambda/2 * sum(temp.^2));
+
+Theta1_grad = 1/m * DeltaL1;
+Theta2_grad = 1/m * DeltaL2;
 
 % -------------------------------------------------------------
 
