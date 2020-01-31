@@ -104,8 +104,8 @@ temp = [temp1(:); temp2(:)];
 
 J = 1/m * (J + lambda/2 * sum(temp.^2));
 
-Theta1_grad = 1/m * DeltaL1;
-Theta2_grad = 1/m * DeltaL2;
+Theta1_grad = 1/m * (DeltaL1 + lambda * temp1);
+Theta2_grad = 1/m * (DeltaL2 + lambda * temp2);
 
 % -------------------------------------------------------------
 
