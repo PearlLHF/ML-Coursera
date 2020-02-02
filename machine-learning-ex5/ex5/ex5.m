@@ -218,3 +218,9 @@ end
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
+%% =========== Part 9: Computing test set error =============
+
+[theta] = trainLinearReg(X_poly, y, 3);
+error_test = 1/(2*size(X_poly_test,1)) * sum((X_poly_test * theta - ytest).^2);
+fprintf('The test set error for lambda = 3 is: %f.\n', error_test);
