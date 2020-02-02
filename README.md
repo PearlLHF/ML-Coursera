@@ -12,3 +12,5 @@
 
 5. Programming Assignment 4 - Neural Network Learning
 
+6. Programming Assignment 5 - Regularized Linear Regression and Bias/Variance
+
