@@ -14,3 +14,5 @@
 
 6. Programming Assignment 5 - Regularized Linear Regression and Bias/Variance
 
+7. Programming Assignment 6 - Support Vector Machines
+
