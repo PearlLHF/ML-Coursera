@@ -26,7 +26,7 @@ for i = 1:size(X,1)
     idx(i) = 1;
     for j = 2:K
         dis = sum((X(i,:) - centroids(j,:)).^2);
-        if(dis < disMin)
+        if dis < disMin
             disMin = dis;
             idx(i) = j;
         end
