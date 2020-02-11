@@ -16,3 +16,5 @@
 
 7. Programming Assignment 6 - Support Vector Machines
 
+8. Programming Assignment 7 - K-Means Clustering and PCA
+
