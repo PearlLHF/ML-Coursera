@@ -18,3 +18,5 @@
 
 8. Programming Assignment 7 - K-Means Clustering and PCA
 
+9. Programming Assignment 8 - Anomaly Detection and Recommender Systems
+
