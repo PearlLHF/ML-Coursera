@@ -2,6 +2,8 @@
 
 *The following contents are the programming assignment in the coursera course - Machine Learning - offered by Stanford*
 
+0. Lecture Slides
+
 1. Octave Tutorial
 
 2. Programming Assignment 1 - Linear Regression
